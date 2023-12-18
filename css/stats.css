@@ -1,0 +1,47 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    
+}
+
+.text-blue {
+    color: #1250c5;
+}
+
+.bg-aqua {
+    background-color: aqua;
+}
+
+.bg-yellow {
+    background-color: rgb(238, 226, 57);
+}
+
+.bg-red {
+    background-color: rgb(241, 43, 43);
+}
+
+.bg-purple {
+    background-color: rgb(175, 54, 255);
+}
+
+.bg-pink {
+    background-color: rgb(255, 54, 228);
+    
+}
+.bg-orange {
+
+    background-color: rgb(255, 144, 54);
+    
+}
+
+
+.card-statistics { 
+    width: 20%;
+    height: 200px;
+    font-size: 25px;
+    line-height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    
+}
