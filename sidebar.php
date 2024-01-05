@@ -36,7 +36,7 @@
                             </li>
                             <li style="--bg: #e9d045;">
                                 <a href="#">
-                                    <div class="icon"><ion-icon name="business"></ion-icon></div>
+                                        <div class="icon"><ion-icon name="business"></ion-icon></div>
                                     <div class="text">ESTABLISHMENT</div>
                                 </a>
                             </li>

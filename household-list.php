@@ -16,7 +16,7 @@
                 <form action="/search" method="get">
                     <input type="text" name="q" placeholder="Search...">
                     <button type="submit">Search</button>
-                    <a href="household.html" class="upper-right-button"><ion-icon name="person-add-outline"></ion-icon></a>
+                    <a href="household-form.php" class="upper-right-button"><ion-icon name="person-add-outline"></ion-icon></a>
             </div>
                     <div class="table-container" id="tableContainer">
                  </form>

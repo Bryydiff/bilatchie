@@ -22,7 +22,7 @@
                 <span class="details">Email</span>
                 <input type="text" placeholder="Enter your email" required>
             </div>
-            <div class="input-box">
+            <div class="input-box"> 
                 <span class="details">Phone Number</span>
                 <input type="text" placeholder="Enter your number" required>
             </div>
