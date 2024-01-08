@@ -1,106 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1,0">
-    <title>Barangay Sto. Tomas</title>
-    <link rel="stylesheet" type="text/css" href="css/kabarangay.css">
+      <meta charset="UTF-8">
+      <title>Kabarangay</title>
+      <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+      <link rel="stylesheet" href="css/household-list.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
-     <body>
-        <div class="menuToggle"></div>
-        <div class="sidebar">
-            <ul>
-                <li class="logo" style="--bg: #333;">
-                  <a href="#">
-                    <div class="imgBoox">
-                            <img src="img/logo.png">   
-                    </div>
-                    <div class="text">Sto. Tomas RBI</div>
-                  </a>
-                </li>
-                <div class="Menulist">
-                    <li style="--bg: #ffa117;">
-                        <a href="/dash/dashboard.html">
-                            <div class="icon"><ion-icon name="grid"></ion-icon></div>
-                            <div class="text">DASHBOARD</div>
-                         </a>
-                    </li>
-                    <li style="--bg: #f44336;">
-                        <a href="../HHTable.html">
-                            <div class="icon"><ion-icon name="home"></ion-icon></div>
-                            <div class="text">HOUSEHOLD</div>
-                         </a>
-                    </li>
-                    <li style="--bg: #0fc70f;" class = "active">
-                        <a href="../kabarangay.html">
-                            <div class="icon"><ion-icon name="people"></ion-icon></div>
-                            <div class="text">KA-BARANGAY</div>
-                         </a>
-                    </li>
-                    <li style="--bg: #2196f3;">
-                        <a href="../blotter.html">
-                            <div class="icon"><ion-icon name="newspaper"></ion-icon></div>
-                            <div class="text">BLOTTER</div>
-                         </a>
-                    </li>
-                    <li style="--bg: #e9d045;">
-                        <a href="#">
-                            <div class="icon"><ion-icon name="business"></ion-icon></div>
-                            <div class="text">ESTABLISHMENT</div>
-                         </a>
-                    </li>
-                    <li style="--bg: #e91e63;">
-                        <a href="#">
-                            <div class="icon"><ion-icon name="fitness"></ion-icon></div>
-                            <div class="text">COVID-19</div>
-                         </a>
-                    </li>
-                    <li style="--bg: rgb(30, 233, 182);">
-                        <a href="#">
-                            <div class="icon"><ion-icon name="receipt"></ion-icon></div>
-                            <div class="text">CERTIFICATE</div>
-                         </a>
-                    </li>
-                </div>
-                <div class="bottom">
-                    <li style="--bg: #333;">
-                        <a href="#">
-                            <div class="icon">
-                            <div class="imgBx">
-                                <img src="img/376522276_1023314158721897_2179476028798761998_n.jpg">
-                            </div>
-                            </div>
-                            <div class="text">Bimby Ledda</div>
-                         </a>
-                    </li>
-                    <li style="--bg: #333;">
-                        <a href="#">
-                            <div class="icon"><ion-icon name="log-out"></ion-icon></div>
-                            <div class="text">Logout</div>
-                         </a>
-                    </li>
-                </div>
-            </ul>
-        </div>
+   <body>
+      <div class="flex">
+        <?php $PAGE = "kabarangay"?>
+        <?php require_once('./sidebar.php'); ?>
 
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script>
-        let menuToggle = document.querySelector('.menuToggle');
-        let sidebar = document.querySelector('.sidebar');
-        menuToggle.onclick = function () {
-            menuToggle.classList.toggle('active');
-            sidebar.classList.toggle('active');
-        }
-        let Menulist = document.querySelectorAll('.Menulist li');
-        function activeLink() {
-            Menulist.forEach((item) =>
-                item.classList.remove('active'));
-            this.classList.add('active')
-        }
-        Menulist.forEach((item) =>
-            item.addEventListener('click', activeLink));
-    </script>
-    </body>
+        <?php 
+        $conn = new mysqli("localhost", "root", "","barangayrbi");
+        ?>
+        <div class="content">
+            <div style="text-align: right;">
+                <form action="/search" method="get">
+                    <input type="text" name="q" placeholder="Search...">
+                    <button type="submit">Search</button>
+                    <a href="household-form.php" class="upper-right-button"><ion-icon name="person-add-outline"></ion-icon></a>
+            </div>
+                    <div class="table-container" id="tableContainer">
+                 </form>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Resident Number</th>
+                    <th>Religion</th>
+                    <th>Household</th>
+                    <th>Park Number</th>
+                    <th>Time Span</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                <?php
+                    $sql = "SELECT * FROM households";
+                    $results = $conn->query($sql);
+
+
+                    while($row = $results->fetch_array()){
+                        echo "<tr>
+                            <td>" . $row['last_name'] . "</td>
+                            <td>" . $row['first_name'] . "</td>
+                            <td>" . $row['middle_name'] . "</td>
+                            <td>" . $row['suffix'] . "</td>
+                            <td>" . $row['civil_status'] . "</td>
+                            <td>" . $row['nationality'] . "</td>
+                            <td><button>Edit</button></td>
+                        </tr>";
+                    }
+                ?>
+                    
+                    <!-- Add more rows with sample data as needed  -->
+                </tbody>
+            </table>
+         </div>
+        </div>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script>
+      let menuToggle = document.querySelector('.menuToggle');
+      let sidebar = document.querySelector('.sidebar');
+      menuToggle.onclick = function () {
+          menuToggle.classList.toggle('active');
+          sidebar.classList.toggle('active');
+      }
+      let Menulist = document.querySelectorAll('.Menulist li');
+      function activeLink() {
+          Menulist.forEach((item) =>
+              item.classList.remove('active'));
+          this.classList.add('active')
+      }
+      Menulist.forEach((item) =>
+          item.addEventListener('click', activeLink));
+  </script>
+   </body>
 </html>

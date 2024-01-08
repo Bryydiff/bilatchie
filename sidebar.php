@@ -17,7 +17,7 @@
                                 </a>
                             </li>
                             <li style="--bg: #f44336;" <?php echo $PAGE == "household" ? "class='active'" : ""; ?>>
-                                <a href="household-list.php">
+                                <a href="household-form.php">
                                     <div class="icon"><ion-icon name="home"></ion-icon></div>
                                     <div class="text">HOUSEHOLD</div>
                                 </a>
