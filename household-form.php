@@ -16,54 +16,58 @@
                     <div class="user-details">
                         <div class="input-box">
                             <span class="details">Last Name</span>
-                            <input type="text" name="last_name" placeholder="Last Name" value="Ledda" required>
+                            <input type="text" name="last_name" placeholder="Last Name" value="" required>
                            </div>
                         <div class="input-box">
                             <span class="details">First Name</span>
-                            <input type="text" name="first_name" placeholder="First Name" value="Raven" required>
+                            <input type="text" name="first_name" placeholder="First Name" value="" required>
                           </div>
                         <div class="input-box"> 
                             <span class="details">Middle Name</span>
-                            <input type="text"  name="middle_name" placeholder="Middle Name" value="Jarangue" required>
+                            <input type="text"  name="middle_name" placeholder="Middle Name" value="" required>
                             </div>
-                        <div class="input-box">
+                            <div class="input-box">
                             <span class="details">Suffix</span>
                             <input type="text"  name="suffix" placeholder="Suffix (Jr, Sr, I,II,III etc.)" >
                             </div>
                         <div class="input-box">
+                            <span class="details">Age</span>
+                            <input type="text"  name="age" placeholder="age" value="" required>
+                            </div>
+                        <div class="input-box">
                             <span class="details">Gender</span>
-                            <input type="text"  name="gender" placeholder="Male or Female" value="Male" required>
+                            <input type="text"  name="gender" placeholder="Male or Female" value="" required>
+                            </div>                       
+                            <div class="input-box">
+                            <span class="details">Civil Status</span>
+                            <input type="text"  name="civil_status" placeholder="Civil Status" value="" required>
+                            </div>
+                            <div class="input-box">
+                            <span class="details">Nationality</span>
+                            <input type="text"  name="nationality" placeholder="Nationality" value="" required>
+                            </div>
+                            <div class="input-box">
+                            <span class="details">Religion</span>
+                            <input type="text"  name="religion" placeholder="Religion" value="" required>
                             </div>
                         <div class="input-box">
                             <span class="details">Birthdate</span>
-                            <input type="date" name="birthdate" placeholder="Birthdate" value="11/12/2002" required>
+                            <input type="date" name="birthdate" placeholder="Birthdate" value="" required>
                             </div>
                         <div class="input-box">
                             <span class="details">Birthplace</span>
-                            <input type="text"  name="birthplace" placeholder="Birthplace" value="Paranaque City" required>
-                            </div>
-                        <div class="input-box">
-                            <span class="details">Civil Status</span>
-                            <input type="text"  name="civil_status" placeholder="Civil Status" value="Single" required>
-                            </div>
-                        <div class="input-box">
-                            <span class="details">Nationality</span>
-                            <input type="text"  name="nationality" placeholder="Nationality" value="Filipino" required>
-                            </div>
-                        <div class="input-box">
-                            <span class="details">Religion</span>
-                            <input type="text"  name="religion" placeholder="Religion" value="Catholic" required>
+                            <input type="text"  name="birthplace" placeholder="Birthplace" value="" required>
                             </div>
                         <div class="input-box"> 
                             <span class="details">Occupation</span>
-                            <input type="text"  name="occupation" placeholder="Occupation" value="None" >
+                            <input type="text"  name="occupation" placeholder="Occupation" value="" >
                             </div>
                         <div class="input-box">
                             <span class="details">Contact Number</span>
-                            <input type="number" name="contact_number" placeholder="Contact Number" value="09123123123123" required>
+                            <input type="number" name="contact_number" placeholder="Contact Number" >
                             </div>
                         <div class="input-box">
-                            <input type="checkbox" name="isPwd" id="isPwd" value="Yes">
+                            <input type="checkbox" name="isPwd" id="isPwd" value="">
                             <label for="isPwd"> Yes or No PWD</label><br>
                             </div>
                         <div class="input-box">
@@ -75,11 +79,11 @@
                             <input type="text"  name="family_monthly_income" placeholder="Family Montly Income" value="wanmilyon" required>
                             </div>
                         <div class="input-box">
-                        <input type="checkbox" name="indigent"  id="indigent" value="Yes">
+                        <input type="checkbox" name="indigent"  id="indigent" value="">
                             <label for="indigent"> Yes or No Indigent</label><br>
                             </div>
                         <div class="input-box">
-                        <input type="checkbox" name="soloParent"  id="soloParent" value="Yes">
+                        <input type="checkbox" name="soloParent"  id="soloParent" value="">
                             <label for="soloParent"> Yes or No solo Parent</label><br>
                             </div>
                         <div class="input-box">
@@ -87,24 +91,24 @@
                             <input type="number" name="is_solo_parent" placeholder="Enter number here" >
                             </div>
                         <div class="input-box"> 
-                            <input type="checkbox" name="is_4ps" id="4Ps" value="Yes">
+                            <input type="checkbox" name="is_4ps" id="4Ps" value="">
                             <label for="4Ps"> Yes or No 4Ps Member</label><br>
                             </div>
                         <div class="input-box">
-                        <input type="checkbox" name="is_registered_voter" id="4Ps" value="Yes">
+                        <input type="checkbox" name="is_registered_voter" id="4Ps" value="">
                             <label for="4Ps"> Yes or No Registered Voter</label><br>
                             </div>
                         <div class="input-box">
                             <span class="details">Purok Number</span>
-                            <input type="text"  name="purok_number" placeholder="Enter purok number here" value="basta" required>
+                            <input type="text"  name="purok_number" placeholder="Enter purok number " value="" required>
                             </div>
                         <div class="input-box">
                             <span class="details">House Number</span>
-                            <input type="text"  name="house_number" placeholder="Enter house number here" value="1" required>
+                            <input type="text"  name="house_number" placeholder="Enter house number " value="" required>
                             </div>
                         <div class="input-box"> 
                             <span class="details">Street</span>
-                            <input type="text"  name="street" placeholder="Enter Street Name" value="Gulaman" required>
+                            <input type="text"  name="street" placeholder="Enter Street Name" value="" required>
                             </div>
                     </div>
 

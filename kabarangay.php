@@ -27,12 +27,17 @@
             <table>
                 <thead>
                     <tr>
-                    <th>Name</th>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
                     <th>Age</th>
-                    <th>Resident Number</th>
+                    <th>Gender</th>
+                    <th>Suffix</th>
+                    <th>Civil Status</th>
+                    <th>Nationality</th>
                     <th>Religion</th>
-                    <th>Household</th>
-                    <th>Park Number</th>
+                    <th>Birth Date</th>
+                    <th>Birth Place</th>
                     <th>Time Span</th>
                     </tr>
                 </thead>
@@ -49,9 +54,17 @@
                             <td>" . $row['first_name'] . "</td>
                             <td>" . $row['middle_name'] . "</td>
                             <td>" . $row['suffix'] . "</td>
+                            <td>" . $row['age'] . "</td>
+                            <td>" . $row['gender'] . "</td>
                             <td>" . $row['civil_status'] . "</td>
                             <td>" . $row['nationality'] . "</td>
+                            <td>" . $row['religion'] . "</td>
+                            <td>" . $row['birthdate'] . "</td>
+                            <td>" . $row['birthplace'] . "</td>
+                            
+
                             <td><button>Edit</button></td>
+                             <td><button>Delete</button></td>
                         </tr>";
                     }
                 ?>
@@ -81,3 +94,7 @@
   </script>
    </body>
 </html>
+
+
+
+

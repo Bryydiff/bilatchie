@@ -10,7 +10,6 @@
         <div class="title">Registration</div>
         <form action="#">
         <div class="user-details">
-            <div class="input-box">
                 <span class="details">Full Name</span>
                 <input type="text" placeholder="Enter your name" required>
             </div>

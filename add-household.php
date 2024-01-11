@@ -29,21 +29,17 @@ if (! empty($_POST["middle_name"])) {
 $suffix = "";
 if (! empty($_POST["suffix"])) {
     $suffix = htmlspecialchars($_POST["suffix"]);
+    
+}
+
+$age = "";
+if (! empty($_POST["age"])) {
+    $age= htmlspecialchars($_POST["age"]);
 }
 
 $gender = "";
 if (! empty($_POST["gender"])) {
     $gender = htmlspecialchars($_POST["gender"]);
-}
-
-$birthdate = "";
-if (! empty($_POST["birthdate"])) {
-    $birthdate = htmlspecialchars($_POST["birthdate"]);
-}
-
-$birthplace = "";
-if (! empty($_POST["birthplace"])) {
-    $birthplace = htmlspecialchars($_POST["birthplace"]);
 }
 
 $civil_status = "";
@@ -55,17 +51,37 @@ $nationality = "";
 if (! empty($_POST["nationality"])) {
     $nationality = htmlspecialchars($_POST["nationality"]);
 }
-$sql = "INSERT INTO households (last_name,first_name,middle_name,suffix,gender,birthdate,birthplace,civil_status,nationality)
+
+$religion = "";
+if (! empty($_POST["religion"])) {
+    $religion = htmlspecialchars($_POST["religion"]);
+}
+
+$birthdate = "";
+if (! empty($_POST["birtdate"])) {
+    $birth_date = htmlspecialchars($_POST["birthdate"]);
+}
+
+$birthplace = "";
+if (! empty($_POST["birthplace"])) {
+    $birthplace = htmlspecialchars($_POST["birthplace"]);
+
+}
+
+$sql = "INSERT INTO households (last_name,first_name,middle_name,suffix,age,gender,civil_status,nationality,religion,birthdate,birthplace,)
 VALUES (
     '$last_name',
     '$first_name',
     '$middle_name',
     '$suffix',
+    '$age',
     '$gender',
-    '$birthdate',
-    '$birthplace',
     '$civil_status',
     '$nationality'
+    '$religion'
+    '$birthdate',
+    '$birthplace',
+    
 )";
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
