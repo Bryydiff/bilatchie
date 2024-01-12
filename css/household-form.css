@@ -157,3 +157,16 @@ form .button input:hover{
     border-radius: 5px;
     cursor: pointer;
  }
+ 
+ .input-box {
+    display: flex;
+    align-items: center; /* Optional: Align items vertically in the center */
+    margin-top: 5px;
+    margin-left:5px;
+    padding-right: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    margin-left: 10px; /* Adjust the margin as needed */
+}

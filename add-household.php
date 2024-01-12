@@ -29,7 +29,7 @@ if (! empty($_POST["middle_name"])) {
 $suffix = "";
 if (! empty($_POST["suffix"])) {
     $suffix = htmlspecialchars($_POST["suffix"]);
-    
+
 }
 
 $age = "";
@@ -57,18 +57,69 @@ if (! empty($_POST["religion"])) {
     $religion = htmlspecialchars($_POST["religion"]);
 }
 
-$birthdate = "";
-if (! empty($_POST["birtdate"])) {
+$birth_date = "";
+if (! empty($_POST["birth_date"])) {
     $birth_date = htmlspecialchars($_POST["birthdate"]);
 }
 
-$birthplace = "";
-if (! empty($_POST["birthplace"])) {
-    $birthplace = htmlspecialchars($_POST["birthplace"]);
+$birth_place = "";
+if (! empty($_POST["birth_place"])) {
+    $birth_place = htmlspecialchars($_POST["birth_place"]);
 
 }
+$time_span = "";
+if (! empty($_POST["time_span"])) {
+    $time_span = htmlspecialchars($_POST["time_span"]);
+}
+$occupation= "";
+if (! empty($_POST["occupation"])) {
+    $occupation = htmlspecialchars($_POST["occupation"]);
+}
+$contact_number = "";
+if (! empty($_POST["contact_number"])) {
+    $contact_number = htmlspecialchars($_POST["contact_number"]);
+}
 
-$sql = "INSERT INTO households (last_name,first_name,middle_name,suffix,age,gender,civil_status,nationality,religion,birthdate,birthplace,)
+$pwd_id = "";
+if (! empty($_POST["pwd_id"])) {
+    $pwd_id = htmlspecialchars($_POST["pwd?"]);
+}
+
+$monthly_income = "";
+if (! empty($_POST["monthly_income"])) {
+    $monthly_income = htmlspecialchars($_POST["monthly_income"]);
+}
+$indigent = "";
+if (! empty($_POST["indigent"])) {
+    $indigent = htmlspecialchars($_POST["indigent"]);
+}
+$solo_parent_id = "";
+if (! empty($_POST["solo_parent_id"])) {
+    $solo_parent_id = htmlspecialchars($_POST["solo_parent"]);
+}
+$ps_id = "";
+if (! empty($_POST["ps_id"])) {
+    $ps_id = htmlspecialchars($_POST["ps_id"]);
+}
+$registered_voter = "";
+if (! empty($_POST["registered_voter"])) {
+    $registered_voter = htmlspecialchars($_POST["registered_voter"]);
+}
+$purok_number = "";
+if (! empty($_POST["purok_number"])) {
+    $purok_number = htmlspecialchars($_POST["purok_number"]);
+}
+$house_number = "";
+if (! empty($_POST["house_number"])) {
+    $house_number = htmlspecialchars($_POST["house_number"]);
+}
+$street = "";
+if (! empty($_POST["street"])) {
+    $street = htmlspecialchars($_POST["street"]);
+}
+
+
+$sql = "INSERT INTO households (last_name,first_name,middle_name,suffix,age,gender,civil_status,nationality,religion,birth_date,birth_place,time_span,occupation,contact_number,pwd_id,monthly_income,indigent,solo_parent_id,ps_id,registered_voter,purok_number,house_number,street)
 VALUES (
     '$last_name',
     '$first_name',
@@ -79,9 +130,19 @@ VALUES (
     '$civil_status',
     '$nationality'
     '$religion'
-    '$birthdate',
-    '$birthplace',
-    
+    '$birth_date',
+    '$time_span',
+    '$occupation',
+    '$contact_number',
+    '$pwd_id',
+    '$monthly_income',
+    '$indigent',
+    '$solo_parent_id',
+    '$ps_id',
+    '$registered_voter',
+    '$purok_number',
+    '$house_number',
+    '$street',   
 )";
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";

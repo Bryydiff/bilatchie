@@ -39,6 +39,18 @@
                     <th>Birth Date</th>
                     <th>Birth Place</th>
                     <th>Time Span</th>
+                    <th>Last Name</th>
+                    <th>Occupation</th>
+                    <th>Contact Number</th>
+                    <th>PWD Number</th>
+                    <th>Monthly Income</th>
+                    <th>Indigent</th>
+                    <th>Solo Parent ID </th>
+                    <th>4Ps Id</th>
+                    <th>Registered Voter</th>
+                    <th>Purok Number</th>
+                    <th>House Number</th>
+                    <th>Street</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,17 +62,29 @@
 
                     while($row = $results->fetch_array()){
                         echo "<tr>
-                            <td>" . $row['last_name'] . "</td>
-                            <td>" . $row['first_name'] . "</td>
-                            <td>" . $row['middle_name'] . "</td>
-                            <td>" . $row['suffix'] . "</td>
-                            <td>" . $row['age'] . "</td>
-                            <td>" . $row['gender'] . "</td>
-                            <td>" . $row['civil_status'] . "</td>
-                            <td>" . $row['nationality'] . "</td>
-                            <td>" . $row['religion'] . "</td>
-                            <td>" . $row['birthdate'] . "</td>
-                            <td>" . $row['birthplace'] . "</td>
+                        <td>" . $row['last_name'] . "</td>
+                        <td>" . $row['first_name'] . "</td>
+                        <td>" . $row['middle_name'] . "</td>
+                        <td>" . $row['suffix'] . "</td>
+                        <td>" . $row['age'] . "</td>
+                        <td>" . $row['gender'] . "</td>
+                        <td>" . $row['civil_status'] . "</td>
+                        <td>" . $row['nationality'] . "</td>
+                        <td>" . $row['religion'] . "</td>
+                        <td>" . $row['birth_date'] . "</td>
+                        <td>" . $row['birth_place'] . "</td>
+                        <td>" . $row['time_span'] . "</td>
+                        <td>" . $row['occupation'] . "</td>
+                        <td>" . $row['contact_number'] . "</td>
+                        <td>" . $row['pwd_id'] . "</td>
+                        <td>" . $row['monthly_income'] . "</td>
+                        <td>" . $row['indigent'] . "</td>
+                        <td>" . $row['solo_parent_id'] . "</td>
+                        <td>" . $row['ps_id'] . "</td>
+                        <td>" . $row['registered_voter'] . "</td>
+                        <td>" . $row['purok_number'] . "</td>
+                        <td>" . $row['house_number'] . "</td>
+                        <td>" . $row['street'] . "</td>
                             
 
                             <td><button>Edit</button></td>
