@@ -101,9 +101,9 @@ $ps_id = "";
 if (! empty($_POST["ps_id"])) {
     $ps_id = htmlspecialchars($_POST["ps_id"]);
 }
-$registered_voter = "";
-if (! empty($_POST["registered_voter"])) {
-    $registered_voter = htmlspecialchars($_POST["registered_voter"]);
+$register_voter = "";
+if (! empty($_POST["register_voter"])) {
+    $register_voter = htmlspecialchars($_POST["register_voter"]);
 }
 $purok_number = "";
 if (! empty($_POST["purok_number"])) {
@@ -119,7 +119,30 @@ if (! empty($_POST["street"])) {
 }
 
 
-$sql = "INSERT INTO households (last_name,first_name,middle_name,suffix,age,gender,civil_status,nationality,religion,birth_date,birth_place,time_span,occupation,contact_number,pwd_id,monthly_income,indigent,solo_parent_id,ps_id,registered_voter,purok_number,house_number,street)
+$sql = "INSERT INTO households (
+    last_name,
+    first_name,
+    middle_name,
+    suffix,
+    age,
+    gender,
+    civil_status,
+    nationality,
+    religion,
+    birth_date,
+    birth_place,
+    time_span,
+    occupation,
+    contact_number,
+    pwd_id,
+    monthly_income,
+    indigent,
+    solo_parent_id,
+    ps_id,
+    register_voter,
+    purok_number,
+    house_number,
+    street)
 VALUES (
     '$last_name',
     '$first_name',
@@ -131,6 +154,7 @@ VALUES (
     '$nationality',
     '$religion',
     '$birth_date',
+    '$birth_place',
     '$time_span',
     '$occupation',
     '$contact_number',
@@ -139,11 +163,14 @@ VALUES (
     '$indigent',
     '$solo_parent_id',
     '$ps_id',
-    '$registered_voter',
+    '$register_voter',
     '$purok_number',
     '$house_number',
-    '$street',   
+    '$street'   
 )";
+
+echo $sql;
+
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {

@@ -30,9 +30,9 @@
                     <th>Last Name</th>
                     <th>First Name</th>
                     <th>Middle Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
                     <th>Suffix</th>
+                    <th>Age</th>
+                    <th>Gender</th>                   
                     <th>Civil Status</th>
                     <th>Nationality</th>
                     <th>Religion</th>
@@ -81,7 +81,7 @@
                         <td>" . $row['indigent'] . "</td>
                         <td>" . $row['solo_parent_id'] . "</td>
                         <td>" . $row['ps_id'] . "</td>
-                        <td>" . $row['registered_voter'] . "</td>
+                        <td>" . $row['register_voter'] . "</td>
                         <td>" . $row['purok_number'] . "</td>
                         <td>" . $row['house_number'] . "</td>
                         <td>" . $row['street'] . "</td>
