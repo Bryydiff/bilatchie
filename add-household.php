@@ -82,7 +82,7 @@ if (! empty($_POST["contact_number"])) {
 
 $pwd_id = "";
 if (! empty($_POST["pwd_id"])) {
-    $pwd_id = htmlspecialchars($_POST["pwd?"]);
+    $pwd_id = htmlspecialchars($_POST["pwd_id"]);
 }
 
 $monthly_income = "";
@@ -128,8 +128,8 @@ VALUES (
     '$age',
     '$gender',
     '$civil_status',
-    '$nationality'
-    '$religion'
+    '$nationality',
+    '$religion',
     '$birth_date',
     '$time_span',
     '$occupation',
