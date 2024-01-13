@@ -1,4 +1,5 @@
 <?php
+
 $title = "";
 if (! empty($_POST["title"])) {
     $title = htmlspecialchars($_POST["title"]);
@@ -29,7 +30,6 @@ if (! empty($_POST["middle_name"])) {
 $suffix = "";
 if (! empty($_POST["suffix"])) {
     $suffix = htmlspecialchars($_POST["suffix"]);
-
 }
 
 $age = "";
@@ -59,7 +59,7 @@ if (! empty($_POST["religion"])) {
 
 $birth_date = "";
 if (! empty($_POST["birth_date"])) {
-    $birth_date = htmlspecialchars($_POST["birthdate"]);
+    $birth_date = htmlspecialchars($_POST["birth_date"]);
 }
 
 $birth_place = "";
@@ -95,7 +95,7 @@ if (! empty($_POST["indigent"])) {
 }
 $solo_parent_id = "";
 if (! empty($_POST["solo_parent_id"])) {
-    $solo_parent_id = htmlspecialchars($_POST["solo_parent"]);
+    $solo_parent_id = htmlspecialchars($_POST["solo_parent_id"]);
 }
 $ps_id = "";
 if (! empty($_POST["ps_id"])) {

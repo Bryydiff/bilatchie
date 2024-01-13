@@ -138,7 +138,6 @@
 
                     <div class="button">
                     <button id="addMemberBtn" onclick="addMember()">Add Member</button>
-                  
                     <!-- <button id="submitRecordBtn" onclick="submitRecord()">Submit Record</button> -->
                     </div>
                 </div>
@@ -152,7 +151,6 @@
                 function addmember() {
                     document.getElementById("addMember").submit();
                 }
-            
             </script> 
    </body>
 </html>
