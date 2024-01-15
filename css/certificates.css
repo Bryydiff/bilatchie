@@ -16,7 +16,7 @@
     gap:50px;
 
      }
-     a
+     button
      {
 
        position: relative; 
@@ -30,33 +30,33 @@
        padding: 10px 30px;
        transition: 0.5s;
      }
-     a:hover
+     button:hover
      {
         background: var(--clr);
         color: var(--clr);
         letter-spacing: 0.25em;
         box-shadow: 0 0 35px var(--clr);
      } 
-     a:before           
+     button:before           
      {
         content: '';
         position: absolute;
         inset: 2px;
         background: #000000;
      }
-     a span
+     button span
      {
         position: relative;
         z-index: 1;
      }
-     a i
+     button i
      {
         position: absolute;
         inset: 0;
         display: block;
 
      }
-     a i::before
+     button i::before
      {
         content: '';
         position: absolute;
@@ -68,12 +68,12 @@
         transform: translateX(-50%)skewX(325deg);
         transition: 0.5s;
      }
-     a:hover i::before
+     button:hover i::before
      {
         width: 20px;
         left: 10px;
      }
-     a i::after
+     button i::after
      {
         content: '';
         position: absolute;
@@ -85,7 +85,7 @@
         transform: translateX(-50%)skewX(325deg);
         transition: 0.5s;
      }
-     a:hover i::after
+     button:hover i::after
      {
         width: 20px;
         left: 200px;
