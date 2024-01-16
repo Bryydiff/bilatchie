@@ -16,7 +16,11 @@
     gap:50px;
 
      }
+<<<<<<< HEAD
      a
+=======
+     button
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
      {
 
        position: relative; 
@@ -30,33 +34,53 @@
        padding: 10px 30px;
        transition: 0.5s;
      }
+<<<<<<< HEAD
      a:hover
+=======
+     button:hover
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
      {
         background: var(--clr);
         color: var(--clr);
         letter-spacing: 0.25em;
         box-shadow: 0 0 35px var(--clr);
      } 
+<<<<<<< HEAD
      a:before           
+=======
+     button:before           
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
      {
         content: '';
         position: absolute;
         inset: 2px;
         background: #000000;
      }
+<<<<<<< HEAD
      a span
+=======
+     button span
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
      {
         position: relative;
         z-index: 1;
      }
+<<<<<<< HEAD
      a i
+=======
+     button i
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
      {
         position: absolute;
         inset: 0;
         display: block;
 
      }
+<<<<<<< HEAD
      a i::before
+=======
+     button i::before
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
      {
         content: '';
         position: absolute;
@@ -68,12 +92,20 @@
         transform: translateX(-50%)skewX(325deg);
         transition: 0.5s;
      }
+<<<<<<< HEAD
      a:hover i::before
+=======
+     button:hover i::before
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
      {
         width: 20px;
         left: 10px;
      }
+<<<<<<< HEAD
      a i::after
+=======
+     button i::after
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
      {
         content: '';
         position: absolute;
@@ -85,7 +117,11 @@
         transform: translateX(-50%)skewX(325deg);
         transition: 0.5s;
      }
+<<<<<<< HEAD
      a:hover i::after
+=======
+     button:hover i::after
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
      {
         width: 20px;
         left: 200px;

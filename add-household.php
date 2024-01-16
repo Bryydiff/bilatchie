@@ -134,7 +134,11 @@ $sql = "INSERT INTO households (
     time_span,
     occupation,
     contact_number,
+<<<<<<< HEAD
     pwd_number,
+=======
+    pwd_id,
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
     monthly_income,
     indigent,
     solo_parent_id,
@@ -158,7 +162,11 @@ VALUES (
     '$time_span',
     '$occupation',
     '$contact_number',
+<<<<<<< HEAD
     '$pwd_number',
+=======
+    '$pwd_id',
+>>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
     '$monthly_income',
     '$indigent',
     '$solo_parent_id',
