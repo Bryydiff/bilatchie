@@ -29,7 +29,7 @@
                                 </a>
                             </li>
                             <li style="--bg: #2196f3;">
-                                <a href="../blotter.php">
+                                <a href="../blotter-list.php">
                                     <div class="icon"><ion-icon name="newspaper"></ion-icon></div>
                                     <div class="text">BLOTTER</div>
                                 </a>
@@ -47,7 +47,7 @@
                                 </a>
                             </li>
                             <li style="--bg: rgb(30, 233, 182);">
-                                <a href="#">
+                                <a href="../certificate.php">
                                     <div class="icon"><ion-icon name="receipt"></ion-icon></div>
                                     <div class="text">CERTIFICATE</div>
                                 </a>

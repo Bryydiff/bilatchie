@@ -35,18 +35,40 @@
                             <span class="details">Suffix</span>
                             <input type="text"  name="suffix" placeholder="Jr Sr I,II,III etc." >
                             </div>
-                        <div class="input-box">
-                            <span class="details">Age</span>
-                            <input type="text"  name="age" placeholder="" value="" required>
-                            </div>
-                        <div class="input-box">
-                            <span class="details">Gender</span>
-                            <input type="text"  name="gender" placeholder="" value="" required>
-                            </div>                       
+
                             <div class="input-box">
-                            <span class="details">Civil Status</span>
-                            <input type="text"  name="civil_status" placeholder="" value="" required>
+                                <label for="inputState">Age</label>
+                                <select name="age" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="1-20">1-20</option>
+                                <option value="21-40">21-40</option>
+                                <option value="41-60">41-60</option>
+                                <option value="61-80">61-80</option>
+                                <option value="90-Above">90-Above</option>
+                                </select>
+                             </div>
+                       
+                            <div class="input-box">
+                                <label for="inputState">Civil Status</label>
+                                <select name="gender" class="form-control"placeholder="" value="" required>
+                                <option selected>Choose...</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="widowed">Widowed</option>
+                                </select>
                             </div>
+
+                            <div class="input-box">
+                                <label for="inputState">Gender</label>
+                                <select name="civilstatus" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="">Male</option>
+                                <option value="female">Female</option>
+                                <option value="lgbtq">LGBTQ</option>
+                                </select>
+                            </div>
+
+
                             <div class="input-box">
                             <span class="details">Nationality</span>
                             <input type="text"  name="nationality" placeholder="" value="" required>
@@ -56,73 +78,63 @@
                             <input type="text"  name="religion" placeholder="" value="" required>
                             </div>
                         <div class="input-box">
-                            <span class="details">Birthdate</span>
-                            <input type="date" name="birthdate" placeholder="" value="" required>
+                            <span class="details">Birth Date</span>
+                            <input type="date" name="birth_date" placeholder="" value="" required>
                             </div>
                         <div class="input-box">
-                            <span class="details">Birthplace</span>
-                            <input type="text"  name="birthplace" placeholder="" value="" required>
+                            <span class="details">Birth Place</span>
+                            <input type="text"  name="birth_place" placeholder="" value="" required>
+                            </div>
+                            <div class="input-box">
+                            <span class="details">Time Span</span>
+                            <input type="time"  name="time_span" placeholder="" >
                             </div>
                         <div class="input-box"> 
                             <span class="details">Occupation</span>
-                            <input type="text"  name="occupation" placeholder="" value="" >
+                            <input type="text"  name="occupation" placeholder="" value="" required >
                             </div>
                         <div class="input-box">
                             <span class="details">Contact Number</span>
-                            <input type="number" name="contact_number" placeholder="09" >
+                            <input type="text" name="contact_number" placeholder="09" value="" required >
                             </div>
                         <div class="input-box">
-                            <span class="details">PWD?</span>
-                            <input type="checkbox" name="isYesPWD" id="isYesP" value="yes">
-                            <label for="isYes"> Yes</label><br>
-                            <input type="checkbox" name="isNoPWD" id="isNoP" value="no">
-                            <label for="isNo"> No</label><br>
-                            </div>
-
-                            
-                        <div class="input-box">
-                            <span class="details">If Yes, type PWD Number</span>
-                            <input type="text"  name="PWD" placeholder="Type number" >
+                            <span class="details">type PWD Number</span>
+                            <input type="text"  name="pwd_id" placeholder="Type number" >
                             </div>
                         <div class="input-box"> 
-                            <span class="details">Family Montly Income</span>
-                            <input type="text"  name="family_monthly_income" placeholder="Type income" value="" required>
+                            <span class="details">Monthly Income</span>
+                            <input type="text"  name="monthly_income" placeholder="Type income" value="" required>
                             </div>
                         <div class="input-box">
-                            <span class="details">Idigent?</span>
-                            <input type="checkbox" name="IndYes" id="isYesI" value="yes">
+                            <span class="details">Indigent?</span>
+                            <input type="checkbox" name="indigent" id="isYesI" value="yes">
                             <label for="isYes"> Yes</label><br>
-                            <input type="checkbox" name="IndNo" id="isNoI" value="no">
+                            <input type="checkbox" name="indigent" id="isNoI" value="no">
                             <label for="isNo"> No</label><br>
                             </div>
                         <div class="input-box">
-                            <span class="details">Solo Parent?</span>
-                            <input type="checkbox" name="SoloParentYes" id="YesSoloParent" value="yes">
-                            <label for="isYes"> Yes</label><br>
-                            <input type="checkbox" name="SoloParentNo" id="NoSoloParent" value="no">
-                            <label for="isNo"> No</label><br>
+                            <span class="details">Solo Parent ID Number</span>
+                            <input type="number" name="solo_parent_id" placeholder="Type number" >
+                            <input type="checkbox" name="solo_parent_id" id="sp_NO" value="N/A">
+                            <label for="isNo" required> N/A</label><br>
                             </div>
+                            
                         <div class="input-box">
-                            <span class="details">If Yes, Solo Parent ID Number</span>
-                            <input type="number" name="is_solo_parent" placeholder="Type number" >
-                            </div>
-                        <div class="input-box">
-                            <span class="details">4Ps Member?</span>
-                            <input type="checkbox" name="isYes4ps" id="isYes4" value="yes">
-                            <label for="isYes"> Yes</label><br>
-                            <input type="checkbox" name="isNo4ps" id="isNo4" value="no">
-                            <label for="isNo"> No</label><br>
+                            <span class="details">4Ps Id Member?</span>
+                            <input type="text"  name="ps_id" placeholder="Type number" >
+                            <input type="checkbox" name="ps_id" id="ps_Mno" value="no">
+                            <label for="isNo" required> No</label><br>
                             </div>
                         <div class="input-box">
                             <span class="details">Registered Voter?</span>
-                            <input type="checkbox" name="isYesRegVot" id="isYesRV" value="yes">
+                            <input type="checkbox" name="register_voter" id="isYesRV" value="yes">
                             <label for="isYes"> Yes</label><br>
-                            <input type="checkbox" name="isNoRegVot" id="isNoRV" value="no">
+                            <input type="checkbox" name="register_voter" id="isNoRV" value="no">
                             <label for="isNo"> No</label><br>
                             </div>
                         <div class="input-box">
                             <span class="details">Purok Number</span>
-                            <input type="text"  name="purok_number" placeholder="" value="" required>
+                            <input type="number"  name="purok_number" placeholder="" value="" required>
                             </div>
                         <div class="input-box">
                             <span class="details">House Number</span>
@@ -142,6 +154,7 @@
 
                     <div class="button">
                     <button id="addMemberBtn" onclick="addMember()">Add Member</button>
+                  
                     <!-- <button id="submitRecordBtn" onclick="submitRecord()">Submit Record</button> -->
                     </div>
                 </div>
@@ -155,7 +168,7 @@
                 function addmember() {
                     document.getElementById("addMember").submit();
                 }
+            
             </script> 
    </body>
 </html>
- 
