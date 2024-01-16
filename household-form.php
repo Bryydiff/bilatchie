@@ -35,24 +35,40 @@
                             <span class="details">Suffix</span>
                             <input type="text"  name="suffix" placeholder="Jr Sr I,II,III etc." >
                             </div>
-                        <div class="input-box">
-                            <span class="details">Age</span>
-                            <input type="number"  name="age" placeholder="" value="" required>
-                            </div>
-                        <div class="input-box">
-                            <span class="details">Gender</span>
-                            <input type="text"  name="gender" placeholder="" value="" required>
-                            </div>                       
+
+                            <div class="input-box">
+                                <label for="inputState">Age</label>
+                                <select name="age" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="1-20">1-20</option>
+                                <option value="21-40">21-40</option>
+                                <option value="41-60">41-60</option>
+                                <option value="61-80">61-80</option>
+                                <option value="90-Above">90-Above</option>
+                                </select>
+                             </div>
+                       
                             <div class="input-box">
                                 <label for="inputState">Civil Status</label>
-                                <select name="civil_status" class="form-control">
+                                <select name="gender" class="form-control"placeholder="" value="" required>
                                 <option selected>Choose...</option>
-                                <option value="Single">Single</option>
-                                <option value="Married">Married</option>
-                                <option value="Widow">Widow</option>
-                                <option value="Divorce">Divorce</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="widowed">Widowed</option>
                                 </select>
                             </div>
+
+                            <div class="input-box">
+                                <label for="inputState">Gender</label>
+                                <select name="civilstatus" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="">Male</option>
+                                <option value="female">Female</option>
+                                <option value="lgbtq">LGBTQ</option>
+                                </select>
+                            </div>
+
+
                             <div class="input-box">
                             <span class="details">Nationality</span>
                             <input type="text"  name="nationality" placeholder="" value="" required>
