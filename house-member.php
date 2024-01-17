@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/household-form.css">
+    <link rel="stylesheet" href="css/house-member.css">
    </head> 
    <body>
    <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-        <?php $PAGE = "household"?>
+        <?php $PAGE = ""?>
         <?php require_once('./sidebar.php'); ?>
             </div>
         <div class="col-md-9">
         <div class="container">
-                <div class="title">Personal Information</div>
-                <form action="add-household.php" method="POST" id="addMember"> 
+                <div class="title">House Member Registration</div>
+                <form action="house-member.php" method="POST" id="addMember"> 
                     <div class="user-details">
-                        <div class="input-box">
+                    <div class="input-box">
                             <span class="details">Last Name</span>
                             <input type="text" name="last_name" placeholder="" value="" required>
                            </div>

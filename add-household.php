@@ -80,9 +80,9 @@ if (! empty($_POST["contact_number"])) {
     $contact_number = htmlspecialchars($_POST["contact_number"]);
 }
 
-$pwd_id = "";
-if (! empty($_POST["pwd_id"])) {
-    $pwd_id = htmlspecialchars($_POST["pwd_id"]);
+$pwd_number = "";
+if (! empty($_POST["pwd_number$pwd_number"])) {
+    $pwd_number = htmlspecialchars($_POST["pwd_number$pwd_number"]);
 }
 
 $monthly_income = "";
@@ -134,11 +134,7 @@ $sql = "INSERT INTO households (
     time_span,
     occupation,
     contact_number,
-<<<<<<< HEAD
     pwd_number,
-=======
-    pwd_id,
->>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
     monthly_income,
     indigent,
     solo_parent_id,
@@ -162,11 +158,7 @@ VALUES (
     '$time_span',
     '$occupation',
     '$contact_number',
-<<<<<<< HEAD
     '$pwd_number',
-=======
-    '$pwd_id',
->>>>>>> 665951b923d24ef2eacac8bb85f55b92586cc657
     '$monthly_income',
     '$indigent',
     '$solo_parent_id',
