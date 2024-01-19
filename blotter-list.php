@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/logo.png"/>
     <title>Blotter</title>
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
     <link rel="stylesheet" href="css/blotter-list.css">

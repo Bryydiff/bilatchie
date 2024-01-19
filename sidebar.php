@@ -22,25 +22,25 @@
                                     <div class="text">HOUSEHOLD</div>
                                 </a>
                             </li>
-                            <li style="--bg: #0fc70f;">
+                            <li style="--bg: #0fc70f;"<?php echo $PAGE == "kabarangay" ? "class='active'" : ""; ?>>
                                 <a href="../kabarangay.php">
                                     <div class="icon"><ion-icon name="people"></ion-icon></div>
                                     <div class="text">KA-BARANGAY</div>
                                 </a>
                             </li>
-                            <li style="--bg: #2196f3;">
+                            <li style="--bg: #2196f3;"<?php echo $PAGE == "blotter-list" ? "class='active'" : ""; ?>>
                                 <a href="../blotter-list.php">
                                     <div class="icon"><ion-icon name="newspaper"></ion-icon></div>
                                     <div class="text">BLOTTER</div>
                                 </a>
                             </li>
-                            <li style="--bg: #e9d045;">
-                                <a href="#">
+                            <li style="--bg: #e9d045;"<?php echo $PAGE == "establishment" ? "class='active'" : ""; ?>>
+                                <a href="../establishment/index.php">
                                         <div class="icon"><ion-icon name="business"></ion-icon></div>
                                     <div class="text">ESTABLISHMENT</div>
                                 </a>
                             </li>
-                            <li style="--bg: #e91e63;">
+                            <li style="--bg: #e91e63;"<?php echo $PAGE == "covid-19" ? "class='active'" : ""; ?>>
                                 <a href="#">
                                     <div class="icon"><ion-icon name="fitness"></ion-icon></div>
                                     <div class="text">COVID-19</div>

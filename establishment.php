@@ -1,64 +1,87 @@
-<html lang="en" dir="ltr">
-   <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
-    <title> Responsive Registration Form | CodingLab </title>
-    <link rel="stylesheet" href="css/establishment.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head> 
-   <body>
-      <div class="container">
-        <div class="title">Registration</div>
-        <form action="#">
-        <div class="user-details">
-                <span class="details">Full Name</span>
-                <input type="text" placeholder="Enter your name" required>
-            </div>
-            <div class="input-box">
-                <span class="details">Username</span>
-                <input type="text" placeholder="Enter your username" required>
-            </div>
-             <div class="input-box">
-                <span class="details">Email</span>
-                <input type="text" placeholder="Enter your email" required>
-            </div>
-            <div class="input-box">
-                <span class="details">Phone Number</span>
-                <input type="text" placeholder="Enter your number" required>
-            </div>
-            <div class="input-box">
-                <span class="details">Password</span>
-                <input type="text" placeholder="Enter your password" required>
-            </div>
-            <div class="input-box">
-                <span class="details">Confirm Pasword</span>
-                <input type="text" placeholder="Confirm your password" required>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establishment Information</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <style>
+        /* Add custom styles here if needed */
+        body {
+            padding-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container mt-3">
+            <a href="action.php" class="btn btn-primary">Add Establishment</a>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <h2 class="text-center">Establishment Information</h2>
             </div>
         </div>
-        <div class="gender-details">
-            <input type="radio" name="gender" id="dot-1">
-            <input type="radio" name="gender" id="dot-2">
-            <input type="radio" name="gender" id="dot-3">
-            <span class="gender-title">Gender</span>    
-            <div class="category">
-                <label for="dot-1">
-                    <span class="dot one"></span>
-                    <span class="gender">Male</span>
-                </label>
-                <label for="dot-2">
-                    <span class="dot two"></span>
-                    <span class="gender">Female</span>
-                </label>
-                <label for="dot-3">
-                    <span class="dot three"></span>
-                    <span class="gender">Prefer not to say</span>
-                </label>
-            </div>
-        </div>
-        <div class="button">
-            <input type="submit" value="Resgiter">
-        </div>
-        </form>
-      </div>
-   </body>
+
+        <?php
+        // Establish a connection to the MySQL database
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "establishment";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Fetch data from the database
+        $sql = "SELECT * FROM establishments";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo '<div class="row">';
+            echo '<div class="col-12">';
+            echo '<table class="table">';
+            echo '<thead><tr><th>Barangay</th><th>Proprietor</th><th>Purok</th><th>Address</th><th>Establishment Name</th><th>National ID</th></tr></thead>';
+            echo '<tbody>';
+            while ($row = $result->fetch_assoc()) {
+                echo '<tr>';
+                echo '<td>' . $row['barangay'] . '</td>';
+                echo '<td>' . $row['proprietor'] . '</td>';
+                echo '<td>' . $row['purok'] . '</td>';
+                echo '<td>' . $row['address'] . '</td>';
+                echo '<td>' . $row['establishmentName'] . '</td>';
+                echo '<td>' . $row['nationalID'] . '</td>';
+                echo '</tr>';
+            }
+            echo '</tbody>';
+            echo '</table>';
+            echo '</div>';
+            echo '</div>';
+        } else {
+            echo '<div class="row">';
+            echo '<div class="col-12 text-center">';
+            echo 'No data found.';
+            echo '</div>';
+            echo '</div>';
+        }
+
+
+        // Close the database connection
+        $conn->close();
+        ?>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+</body>
+
 </html>
- 

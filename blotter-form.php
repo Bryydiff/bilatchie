@@ -79,7 +79,6 @@
         <div class="button">
                     <button id="addBlotterBtn" onclick="addBlotter()">Add Blotter</button>
                   
-                    <!-- <button id="submitRecordBtn" onclick="submitRecord()">Submit Record</button> -->
                     </div>
         <!-- <div class="button">
             <input type="submit" value="Submit">
@@ -89,12 +88,38 @@
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
             <script>
-                function addBlotter() {
-                    document.getElementById("addBlotter").submit();
-                }
-            
-            </script> 
-      </div>
-   </body>
-</html>
- 
+    function addBlotter() {
+        // Get the form element
+        var form = document.getElementById("addBlotter");
+
+        // Validate the required fields
+        var incidentDate = form.elements["incident_date"].value;
+        var incidentTime = form.elements["incident_time"].value;
+        var incidentLocation = form.elements["incident_location"].value;
+        var complainantsName = form.elements["complainants_name"].value;
+        var complainantsContact = form.elements["complainants_contact"].value;
+        var respondentsName = form.elements["respondents_name"].value;
+        var witness1 = form.elements["witness_1"].value;
+        var witness2 = form.elements["witness_2"].value;
+        var complainantsDetails = form.elements["complainants_details"].value;
+
+        // Check if any required field is empty
+        if (
+            incidentDate === "" ||
+            incidentTime === "" ||
+            incidentLocation === "" ||
+            complainantsName === "" ||
+            complainantsContact === "" ||
+            respondentsName === "" ||
+            witness1 === "" ||
+            witness2 === "" ||
+            complainantsDetails === ""
+        ) {
+            alert("Please fill in all required fields.");
+            return false; // Prevent form submission
+        }
+
+        // If all fields are filled, submit the form
+        form.submit();
+    }
+</script>
